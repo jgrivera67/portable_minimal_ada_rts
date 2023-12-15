@@ -8,5 +8,3 @@ authors = ["J. German Rivera"]
 maintainers = ["J. German Rivera <jgrivera67@gmail.com>"]
 maintainers-logins = ["jgrivera67"]
 
-[[depends-on]]
-gnat_arm_elf = "^12.1.2"

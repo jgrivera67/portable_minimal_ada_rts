@@ -857,7 +857,8 @@ package body System.Fat_Gen is
 
       type Float_Access is access all T;
       function To_Address is
-         new Ada.Unchecked_Conversion (Float_Access, System.Address);
+         new Ada.Unchecked_Conversion (Float_Access, System.Address)
+         with Warnings => Off;
 
       XA : constant System.Address := To_Address (Float_Access (X));
 

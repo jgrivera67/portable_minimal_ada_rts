@@ -41,9 +41,11 @@ package body System.Storage_Elements is
    --  where Address is a visible integer type.
 
    function To_Address is
-     new Ada.Unchecked_Conversion (Storage_Offset, Address);
+     new Ada.Unchecked_Conversion (Storage_Offset, Address)
+     with Warnings => Off;
    function To_Offset  is
-     new Ada.Unchecked_Conversion (Address, Storage_Offset);
+     new Ada.Unchecked_Conversion (Address, Storage_Offset)
+     with Warnings => Off;
 
    --  Conversion to/from integers
 

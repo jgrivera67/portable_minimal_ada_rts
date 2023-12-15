@@ -1,9 +1,7 @@
 with "config/portable_minimal_ada_rts_config.gpr";
-with "compiler_flags.gpr";
 
 project Portable_Minimal_Ada_Rts is
 
-   for Target use Compiler_Flags.Target_Compiler_Selector;
    for Runtime ("Ada") use  Project'Project_Dir;
    for Languages use ("Ada");
 
@@ -25,11 +23,11 @@ project Portable_Minimal_Ada_Rts is
 
    package Compiler is
       for Default_Switches ("Ada") use
-         Portable_Minimal_Ada_Rts_Config.Ada_Compiler_Switches &
-         Compiler_Flags.Compiler.ADAFLAGS &
          ("-gnatg",     -- Internal GNAT implementation mode to compile runtime library
+          "-gnaty-d",   -- Disable check no DOS line terminators present
           "-nostdinc",  -- Inhibit the search of the default location for the GNAT Run Time Library (RTL) source files.
-          "-nostdlib"); -- Inhibit the search of the default location for the GNAT Run Time Library (RTL) ALI files.
+          "-nostdlib"   -- Inhibit the search of the default location for the GNAT Run Time Library (RTL) ALI files.
+	 );
    end Compiler;
 
    package Install is
