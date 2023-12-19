@@ -36,8 +36,12 @@
 --  This unit may be used directly from an application program by providing
 --  an appropriate WITH, and the interface can be expected to remain stable.
 
-package System.Assertions with No_Elaboration_Code_All
-is
+with Ada.Assertions;
+
+package System.Assertions is
+
+   Assert_Failure : exception renames Ada.Assertions.Assertion_Error;
+   --  Exception raised when assertion fails
 
    procedure Raise_Assert_Failure (Msg : String) with No_Return;
    --  Called to raise Assert_Failure with given message
