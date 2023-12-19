@@ -6,7 +6,7 @@
 --                                                                          --
 --                                 S p e c                                  --
 --                                                                          --
---          Copyright (C) 1992-2018, Free Software Foundation, Inc.         --
+--          Copyright (C) 1992-2023, Free Software Foundation, Inc.         --
 --                                                                          --
 -- GNAT is free software;  you can  redistribute it  and/or modify it under --
 -- terms of the  GNU General Public License as published  by the Free Soft- --
@@ -43,7 +43,8 @@ package System.Assertions is
    Assert_Failure : exception renames Ada.Assertions.Assertion_Error;
    --  Exception raised when assertion fails
 
-   procedure Raise_Assert_Failure (Msg : String) with No_Return;
+   procedure Raise_Assert_Failure (Msg : String);
+   pragma No_Return (Raise_Assert_Failure);
    --  Called to raise Assert_Failure with given message
 
 end System.Assertions;

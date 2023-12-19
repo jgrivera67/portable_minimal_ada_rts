@@ -5,7 +5,7 @@ pragma Style_Checks (Off);
 package Portable_Minimal_Ada_Rts_Config is
    pragma Pure;
 
-   Crate_Version : constant String := "1.0.0";
+   Crate_Version : constant String := "12.2.1";
    Crate_Name : constant String := "portable_minimal_ada_rts";
 
    Alire_Host_OS : constant String := "linux";

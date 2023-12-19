@@ -6,7 +6,7 @@
 --                                                                          --
 --                                 B o d y                                  --
 --                                                                          --
---          Copyright (C) 1992-2018, Free Software Foundation, Inc.         --
+--          Copyright (C) 1992-2023, Free Software Foundation, Inc.         --
 --                                                                          --
 -- GNAT is free software;  you can  redistribute it  and/or modify it under --
 -- terms of the  GNU General Public License as published  by the Free Soft- --
@@ -41,11 +41,9 @@ package body System.Storage_Elements is
    --  where Address is a visible integer type.
 
    function To_Address is
-     new Ada.Unchecked_Conversion (Storage_Offset, Address)
-     with Warnings => Off;
+     new Ada.Unchecked_Conversion (Storage_Offset, Address);
    function To_Offset  is
-     new Ada.Unchecked_Conversion (Address, Storage_Offset)
-     with Warnings => Off;
+     new Ada.Unchecked_Conversion (Address, Storage_Offset);
 
    --  Conversion to/from integers
 

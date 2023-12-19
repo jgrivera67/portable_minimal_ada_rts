@@ -2,7 +2,7 @@
 #ifndef PORTABLE_MINIMAL_ADA_RTS_CONFIG_H
 #define PORTABLE_MINIMAL_ADA_RTS_CONFIG_H
 
-#define CRATE_VERSION "1.0.0"
+#define CRATE_VERSION "12.2.1"
 #define CRATE_NAME "portable_minimal_ada_rts"
 
 #define ALIRE_HOST_OS "linux"
